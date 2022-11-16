@@ -10,29 +10,35 @@ const myContainerSquare = document.getElementById("container-square");
 
 console.log(myContainerSquare);
 
-// Andiamo a creare un ciclo "for" da 1 a 100.
+// 1) Andiamo a creare un ciclo "for" da 1 a 100.
 
 for(let i = 1; i <= 100; i++){
-    
+
+    // 6) Andiamo a creare una variante per collegare la "Funzione".
+
     let newElement = createSquare();
 
     myContainerSquare.appendChild(newElement);
+
+    // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
+
+    newElement.append(i);
 }
 
-// Andiamo a creare la nostra "Funzione".
+// 2) Andiamo a creare la nostra "Funzione".
 
 function createSquare() {
 
-    // Andiamo a creare i nostri "div".
+    // 3) Andiamo a creare i nostri "div".
 
     const myElement = document.createElement("div");
 
-    // Andiamo ad aggiungere la nostra classe ".square" ai "div".
+    // 4) Andiamo ad aggiungere la nostra classe ".square" ai "div".
 
     myElement.classList.add("square");
     console.log(myElement);
 
-    // Ritorno.
+    // 5) Ritorno.
 
     return myElement
 
