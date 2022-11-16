@@ -10,6 +10,26 @@ const myContainerSquare = document.getElementById("container-square");
 
 console.log(myContainerSquare);
 
+// Andiamo a creare una variabile per collegare il nostro "bottone".
+
+let myButton = document.getElementById("mybutton");
+
+// Andiamo a creare una variabile per collegare il nostro "main".
+
+let myMain = document.getElementById("mymain");
+
+myMain.classList.add("toggle");
+
+// Andiamo a settare il nostro bottone.
+
+myButton.addEventListener("click",
+
+    function(){
+        myMain.classList.remove("toggle");
+    }
+)
+
+
 // 1) Andiamo a creare un ciclo "for" da 1 a 100.
 
 for(let i = 1; i <= 100; i++){
