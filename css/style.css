@@ -1,0 +1,51 @@
+/* General Rules */
+.container{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    /* DEBUG */
+    /* background-color: blue; */
+}
+
+/* Header Rules */
+header{
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;
+    border: 1px solid black;
+    /* DEBUG */
+    background-color: white;
+}
+
+/* Main Rules */
+main{
+    width: 100%;
+    height: 80vh;
+    margin: 0 auto;
+    border: 1px solid black;
+    /* DEBUG */
+    background-color: white;
+}
+
+#container-square{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    background-color: white;
+    height: 50px;
+    width: 10%;
+    border: 1px solid black;
+}
+
+/* Footer Rules */
+footer{
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;
+    border: 1px solid black;
+    /* DEBUG */
+    background-color: white;
+}
+
