@@ -14,5 +14,27 @@ console.log(myContainerSquare);
 
 for(let i = 1; i <= 100; i++){
     
-    console.log(i);
+    let newElement = createSquare();
+
+    myContainerSquare.appendChild(newElement);
 }
+
+// Andiamo a creare la nostra "Funzione".
+
+function createSquare() {
+
+    // Andiamo a creare i nostri "div".
+
+    const myElement = document.createElement("div");
+
+    // Andiamo ad aggiungere la nostra classe ".square" ai "div".
+
+    myElement.classList.add("square");
+    console.log(myElement);
+
+    // Ritorno.
+
+    return myElement
+
+}
+
