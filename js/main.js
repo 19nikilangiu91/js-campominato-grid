@@ -18,11 +18,25 @@ for(let i = 1; i <= 100; i++){
 
     let newElement = createSquare();
 
+    // 8) Andiamo a creare il "clicked" per le nostre "square".
+
+    newElement.addEventListener("click",
+
+        function(){
+
+            newElement.classList.toggle("clicked");
+
+            console.log("Hai selezionato la square n. ", newElement, i);
+        }
+    )
+
     myContainerSquare.appendChild(newElement);
 
     // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
 
     newElement.append(i);
+
+    // console.log(newElement, i)
 }
 
 // 2) Andiamo a creare la nostra "Funzione".
@@ -36,11 +50,9 @@ function createSquare() {
     // 4) Andiamo ad aggiungere la nostra classe ".square" ai "div".
 
     myElement.classList.add("square");
-    console.log(myElement);
 
     // 5) Ritorno.
 
     return myElement
-
 }
 

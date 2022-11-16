@@ -53,6 +53,10 @@ main{
     border: 1px solid black;
 }
 
+.square.clicked{
+    background-color: aquamarine;
+}
+
 /* Footer Rules */
 footer{
     width: 100%;
