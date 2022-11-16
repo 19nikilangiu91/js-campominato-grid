@@ -18,14 +18,14 @@ let myButton = document.getElementById("mybutton");
 
 let myMain = document.getElementById("mymain");
 
-myMain.classList.add("toggle");
+myMain.classList.add("hidden");
 
 // Andiamo a settare il nostro bottone.
 
 myButton.addEventListener("click",
 
     function(){
-        myMain.classList.remove("toggle");
+        myMain.classList.remove("hidden");
     }
 )
 
