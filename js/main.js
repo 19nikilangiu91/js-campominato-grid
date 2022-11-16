@@ -46,15 +46,20 @@ for(let i = 1; i <= 100; i++){
 
             newElement.classList.toggle("clicked");
 
-            console.log("Hai selezionato la square n. ", newElement, i);
-        }
+            console.log("Hai selezionato la square n. ", i);
+
+            // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
+
+            newElement.innerHTML = (i);
+
+        }, {once : true}
     )
 
     myContainerSquare.appendChild(newElement);
 
     // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
 
-    newElement.append(i);
+    // newElement.append(i);
 
     // console.log(newElement, i)
 }
