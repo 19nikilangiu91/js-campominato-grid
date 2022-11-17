@@ -18,6 +18,8 @@ let myButton = document.getElementById("mybutton");
 
 let myMain = document.getElementById("mymain");
 
+//Vado ad aggiungere la classe "hidden" a "myMain". 
+
 myMain.classList.add("hidden");
 
 // Andiamo a settare il nostro bottone.
@@ -25,44 +27,51 @@ myMain.classList.add("hidden");
 myButton.addEventListener("click",
 
     function(){
+
+        // Andiamo a rimuovere la classe "hidden" al nostro "main".
+
         myMain.classList.remove("hidden");
-    }
-)
 
+        // Andiamo ad inserire "innerHtml" con una stringa "vuota" e la "console.clear" per resettare la "Console" e il "Container" per non generare altre square al click di "play".
+        
+        myContainerSquare.innerHTML = '';
+        console.clear();
+        
+        // 1) Andiamo a creare un ciclo "for" da 1 a 100.
 
-// 1) Andiamo a creare un ciclo "for" da 1 a 100.
+        for(let i = 1; i <= 100; i++){
 
-for(let i = 1; i <= 100; i++){
+            // 6) Andiamo a creare una variante per collegare la "Funzione".
 
-    // 6) Andiamo a creare una variante per collegare la "Funzione".
+            let newElement = createSquare();
 
-    let newElement = createSquare();
+            // 8) Andiamo a creare il "clicked" per le nostre "square".
 
-    // 8) Andiamo a creare il "clicked" per le nostre "square".
+            newElement.addEventListener("click",
 
-    newElement.addEventListener("click",
+                function(){
 
-        function(){
+                    newElement.classList.toggle("clicked");
 
-            newElement.classList.toggle("clicked");
+                    console.log("Hai selezionato la square n. ", i);
 
-            console.log("Hai selezionato la square n. ", i);
+                    // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
+
+                    newElement.innerHTML = (i);
+
+                }, {once : true}
+            )
+
+            myContainerSquare.appendChild(newElement);
 
             // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
 
-            newElement.innerHTML = (i);
+            // newElement.append(i);
 
-        }, {once : true}
-    )
-
-    myContainerSquare.appendChild(newElement);
-
-    // 7) Aggiungiamo al nostro "newElement" la scritta "i" che andrà ad inserire i relativi numeri (1,2,3,4,5, etc...).
-
-    // newElement.append(i);
-
-    // console.log(newElement, i)
-}
+            // console.log(newElement, i)
+        }
+    }
+)
 
 // 2) Andiamo a creare la nostra "Funzione".
 
